@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    2. Банковская программа
+Пользователь вводит сумму вклада и процент, который будет начисляться ежегодно.
+Отобразить размер вклада поочередно на ближайшие 5 лет.
+    */
+    let depositAmount = +prompt(`Введите сумму вклада.`),
+        percent = +prompt(`Введите ежегодно начисляемый процент.`),
+        years = 5;
+
+    for (let c = 0; c < years; c++) {
+        depositAmount = depositAmount + (depositAmount * percent / 100);
+        document.write(`Размер вклада за ` + (c + 1) + ` год ` + depositAmount + `. <br>`);
+    }
+</script>

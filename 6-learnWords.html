@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+    let easyWords = [
+        [`food`, `еда`],
+        [`nose`, `нос`],
+        [`be`, `быть`],
+        [`laugh`, `смеяться`],
+        [`slow`, `медленно`]
+    ];
+
+    let hardWords = [
+        [`make sure`, `убеждаться`],
+        [`lecturer`, `лектор`],
+        [`waterfall`, `водопад`],
+        [`lifecycle`, `жизненный цикл`],
+        [`handsome`, `красивый`]
+    ];
+
+    function checkWords(words) {
+        while(words.length != 0) {
+            let i = parseInt(Math.random() * words.length),
+                userTranslate = prompt(`Назовите перевод слова "${words[i][0]}".`);
+            if (userTranslate == words[i][1]) {
+                alert(`Верно!`);
+                words.splice(i, 1);
+            } else {
+                alert(`Нет, правильный ответ был "${words[i][1]}".`);
+            }
+        }
+        alert(`Вы запомнили все слова, супер!`);
+    }
+
+    checkWords(easyWords);
+    checkWords(hardWords);
+</script>

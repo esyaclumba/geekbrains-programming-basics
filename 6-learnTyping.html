@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+    function generateText(letters, amount) {
+        let phrase = "";
+
+        for (let i = 0; i < amount; i++) {
+            phrase += letters[ parseInt( Math.random() * letters.length ) ];
+        }
+
+        return phrase;
+    }
+
+    alert('Приветствую в программе обучения слепой печати!');
+
+    while (true) {
+        alert(`Положите 4 пальца левой руки (кроме большого) на клавиши ф, ы, в, а. \n Запомните, что под указательным пальцем "а", под средним "в", под безымянным — "ы", а под мизинцем — "ф". \n Постарайтесь не смотреть под клавиатуру.`);
+        let text = generateText([`ф`, `а`], 10);
+        let userType = prompt(text);
+        if (userType == text) break;
+        else { alert(`Вы ошиблись, давайте еще раз.`) }
+    }
+
+    alert(`Все верно, поздравляю! Вы изучили буквы ф и а.`);
+</script>

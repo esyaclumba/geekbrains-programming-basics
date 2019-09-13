@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    let answer = parseInt( Math.random() * 100 );
+    let userAnswer = +prompt(`Я загадал число от 1 до 100. Угадайте его.`);
+    let maxTryCount = 7;
+
+    for (var tryCount = 1; tryCount < maxTryCount; tryCount++) {
+        if (answer == userAnswer) {
+            document.write(`Супер, вы угадали! `);
+            break;
+        }
+        else if (answer > userAnswer) { document.write(`Нет, загаданное число больше ` + userAnswer + `. `); }
+        else if (answer < userAnswer) { document.write(`Нет, загаданное число меньше ` + userAnswer + `. `); }
+
+        document.write(`Попыток у вас осталось ` + (maxTryCount - tryCount) + ` <br>`);
+
+        userAnswer = +prompt(`Попробуйте еще.`)
+    }
+
+    document.write(`Правильный ответ ` + answer);
+</script>

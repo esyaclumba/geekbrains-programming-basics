@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    3. Дописать игру “Угадай число” (по желанию)
+Сделать игру с двумя игроками и бесконечным числом попыток.
+Сделайте возможность выйти из игры по желанию одного из игроков.
+     */
+    let answer = 1,
+        whoseTurn = 1,
+        continueGame = true,
+        tryNum = 1;
+    do {
+        answer = parseInt( Math.random() * 100 );
+        tryNum = 1;
+        userAnswer = +prompt(`Игрок ${whoseTurn}, угадайте число от 1 до 100.`);
+        while (answer != userAnswer) {
+            if (answer > userAnswer) {
+                alert(`Нет, Игрок ${whoseTurn}, загаданное число больше ${userAnswer}. ${++tryNum} попытка...`);
+            }
+            else if (answer < userAnswer) {
+                alert(`Нет, Игрок ${whoseTurn}, загаданное число меньше ${userAnswer}. ${++tryNum} попытка...`);
+            }
+            userAnswer = +prompt(`Попробуйте еще.`);
+        }
+        alert(`Супер, Игрок ${whoseTurn}, вы угадали c ${tryNum} попытки! Ответ и правда ${answer}.`);
+        if (whoseTurn == 1)      { whoseTurn++; }
+        else if (whoseTurn == 2) { whoseTurn--; }
+        continueGame = confirm('Продолжаем играть?');
+    } while (continueGame);
+</script>

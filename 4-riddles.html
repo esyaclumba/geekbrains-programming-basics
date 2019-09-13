@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    1. Игра в загадки
+a. Загадать загадку. Если ответ верен – поздравить пользователя. Затем сообщить, что игра окончена.
+b. Если ответ неверный – написать пользователю, что он не угадал.
+c. Добавить еще 3 загадки. Подсчитать количество правильных ответов, сообщить пользователю.
+d. (По желанию). В качестве верного ответа принимать несколько вариантов ответов. Например, «Стул», «стул», «табуретка» и так далее.
+    */
+    let correctAnswers = 0;
+    let answer1 = `лампочка`,
+        answer1_2 = `лампа`;
+    let quiz1 = prompt(`Висит груша, нельзя скушать — что это?`);
+    quiz1 = quiz1.toLowerCase();
+    if (quiz1 == answer1 || quiz1 == answer1_2) {
+        alert(`Правильно!`);
+        correctAnswers++
+    }  else { alert(`Не угадали.`); }
+
+    let answer2 = 42,
+        answer2_2 = `сорок два`,
+        answer2_3 = `42`;
+    let quiz2 = prompt(`Ответ на основной вопрос человечества.`);
+    quiz2 = quiz2.toLowerCase();
+    if (quiz2 == answer2 || quiz2 == answer2_2 || quiz2 == answer2_3) {
+        alert(`Правильно!`);
+        correctAnswers++
+    } else { alert(`Не угадали.`); }
+
+    let answer3 = `человек`,
+        answer3_2 = `люди`,
+        answer3_3 = `человечество`,
+        answer3_4 = `human`;
+    let quiz3 = prompt(`Кто вначале ходит на 4 ногах, потом на 2, в конце на 3?`);
+    quiz3 = quiz3.toLowerCase();
+    if (quiz3 == answer3 || quiz3 == answer3_2 || quiz3 == answer3_3 || quiz3 == answer3_4) {
+        alert(`Правильно!`);
+        correctAnswers++
+    } else { alert(`Не угадали.`); }
+
+    if (correctAnswers == 0) { alert('Увы, ни одна загадка не разгадана. Игра окончена.'); }
+    else { alert(`Угаданных загадок ` + correctAnswers + `. Игра окончена.`) }
+</script>
