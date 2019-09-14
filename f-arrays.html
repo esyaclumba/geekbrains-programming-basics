@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+<script>
+    // 1. Функции для работы с массивами
+
+    // a. Написать функцию, которая принимает в качестве параметра число n.
+    //    Результатом работы функции является массив из N элементов со значениями 1, 2, 3… n.
+    let nums = [];
+    function makeNumbersArray(n) {
+        if (n > 0) {
+            nums.push(n);
+            n--;
+            return makeNumbersArray(n);
+        } else {
+            let result = nums.reverse();
+            nums = [];
+            return result;
+        }
+    }
+
+    // b. Написать функцию, которая принимает массив чисел.
+    //    Результатом работы функции является сумма чисел этого массива.
+    let sum = 0;
+    function sumUpNumbers(array) {
+        let newArray = array.slice();
+        return summingUp(newArray);
+        function summingUp(newArray) {
+            if (newArray.length > 0) {
+                sum += newArray[newArray.length - 1];
+                newArray.pop();
+                return summingUp(newArray);
+            } else { return sum; }
+        }
+    }
+
+    // c. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает максимальное число.
+    function showMax(array) {
+        let maxNum = array[0];
+        for (let i = 0; i < array.length; i++) {
+            (maxNum < array[i]) ? maxNum = array[i] : 0;
+        }
+        return maxNum;
+    }
+
+    // d. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает минимальное число.
+    function showMin(numbers) {
+        let minNum = numbers[0];
+        for (let i = 0; i < numbers.length; i++) {
+            (minNum > numbers[i]) ? minNum = numbers[i] : 0;
+        }
+        return minNum;
+    }
+
+    //f. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает только четные числа из этого массива. Чтобы определить четность числа, воспользуйтесь оператором для подсчета остатка от деления: x % 2. Если остаток от деления числа на 2 равен 0, число будет четное.
+    function showEvenNums(numbers) {
+        let evenNums = [];
+        for (let i = 0; i < numbers.length; i++) {
+            (numbers[i]%2 == 0) ? evenNums.push(numbers[i]) : 0;
+        }
+        return evenNums;
+    }
+
+    let numbers = [0.3,1,2.7,3,6,8,9,12,13,21,36];
+
+    let result = `Массив: ${numbers}`;
+    result += `\nМассив из ${numbers.length} чисел: ` + makeNumbersArray(numbers.length);
+    result += `\nСложим числа массива и получим ${sumUpNumbers(numbers)}.`;
+    result += `\nСамое большое число массива ${showMax(numbers)}.`;
+    result += `\nСамое маленькое число массива ${showMin(numbers)}.`;
+    result += `\nЧетные числа массива: ${showEvenNums(numbers)}.`;
+
+    alert(result);
+</script>
