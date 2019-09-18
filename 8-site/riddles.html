@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Добро пожаловать на сайт студента GeekBrains</title>
+    <script src="scripts.js"></script>
+    <script src="riddles.js"></script>
+</head>
+<body>
+
+<div class="menu">
+    <script>doMenu();</script>
+</div>
+
+<div class="content">
+    <div class="intro">
+        <h1>Отгадайте все загадки</h1>
+    </div>
+    <div id="form">
+        <p>
+            Висит груша, нельзя скушать — что это?
+            <br><input type="text" id="riddle1">
+        </p>
+        <p>
+            Ответ на основной вопрос человечества.
+            <br><input type="text" id="riddle2">
+        </p>
+        <p>
+            Кто вначале ходит на 4 ногах, потом на 2, в конце на 3?
+            <br><input type="text" id="riddle3">
+        </p>
+        <button onClick="checkAnswers()">Проверить ответы</button>
+        <p id="result"></p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Andika|Caveat:700&display=swap&subset=cyrillic-ext');
+
+:root {
+    --controls: #28307C;
+    --gray: #aaa;
+    --lightgray: #eee;
+
+}
+
+body, input, button {
+    font: 20px/150% 'Andika', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--lightgray);
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Caveat', cursive;
+    line-height: 110%;
+}
+
+h1 { font-size: 4em; }
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: var(--controls);
+}
+
+button, input {
+    border-radius: 4px;
+    margin: 5px 0 10px;
+    padding: 15px 20px;
+}
+
+button {
+    border: var(--controls) 2px solid;
+    background: transparent;
+    color: var(--controls);
+    padding: 14px 60px 16px;
+}
+
+button:hover {
+    color: white;
+    border-color: var(--controls);
+    background-color: var(--controls);
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    border: none;
+    min-width: 620px;
+}
+
+.menu, .content {
+    padding: 0 30px;
+}
+
+.menu {
+    line-height: 75px;
+    padding-bottom: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.menu a.first { margin-left: 0; }
+
+.content {
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.content img, .content h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.content img {
+    width: 200px;
+    border-radius: 100em;
+    margin-right: 30px;
+}
+
+.content h1 { margin: 0; }
+
+.footer { padding: 0 30px 0 10px; }

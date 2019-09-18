@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Добро пожаловать на сайт студента GeekBrains</title>
+    <script src="scripts.js"></script>
+    <script src="guess.js"></script>
+</head>
+<body>
+
+<div class="menu">
+    <script>doMenu();</script>
+</div>
+
+<div class="content">
+    <div class="intro">
+        <h1>Угадайте число от&nbsp;1&nbsp;до&nbsp;100 за&nbsp;10&nbsp;попыток</h1>
+    </div>
+    <div id="form">
+        <p id="guess_content">
+            <input type="text" id="guess_answer">
+            <button onClick="checkAnswer()">Проверить догадку</button>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
