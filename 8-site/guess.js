@@ -20,6 +20,7 @@ function checkAnswer() {
     let userAnswer = getAnswer();
 
     if ( userAnswer == number ) {
+        triesNum++;
         document.getElementsByTagName(`h1`)[0].innerHTML = `Поздравляю, вы угадали с&nbsp;${triesNum}&nbsp;попытки!`;
         playAgainBtn();
     } else {

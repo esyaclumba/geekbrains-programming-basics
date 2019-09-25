@@ -4,7 +4,7 @@
     --controls: #28307C;
     --gray: #aaa;
     --lightgray: #eee;
-
+    --border-radius: 4px;
 }
 
 body, input, button {
@@ -31,7 +31,7 @@ a:hover {
 }
 
 button, input {
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     margin: 5px 0 10px;
     padding: 15px 20px;
 }
@@ -54,6 +54,23 @@ input {
     outline: none;
     border: none;
     min-width: 620px;
+}
+
+.btn.xs {
+    cursor: pointer;
+    font-size: 50%;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--gray);
+    background-color: var(--lightgray);
+    border-radius: var(--border-radius);
+    padding: 5px 10px;
+    position: relative;
+    top: -1px;
+}
+
+.btn.xs:hover {
+    opacity: .7;
 }
 
 .menu, .content {
@@ -92,4 +109,15 @@ input {
 
 .content h1 { margin: 0; }
 
+.content .password { word-wrap: break-word; }
+
 .footer { padding: 0 30px 0 10px; }
+
+.footer .years {
+    bottom: 0;
+    color: var(--gray);
+    margin: 20px 0 20px 20px;
+    font-size: 70%;
+    font-style: italic;
+    line-height: normal;
+}
