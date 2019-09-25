@@ -4,6 +4,7 @@
     --controls: #28307C;
     --gray: #aaa;
     --lightgray: #eee;
+    --metalgray: #71A5C0;
     --border-radius: 4px;
 }
 
@@ -21,6 +22,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 4em; }
+h2 {
+    font-size: 3em;
+}
+h3 {
+    margin-block-start: 1.5em;
+    margin-block-end: 0;
+    font-size: 2em;
+}
 
 a {
     color: black;
@@ -54,6 +63,14 @@ input {
     outline: none;
     border: none;
     min-width: 620px;
+}
+
+hr {
+    width: 50%;
+    border-top: var(--metalgray) 1px solid;
+    margin-left: 0;
+    margin-top: 30px;
+    opacity: .3;
 }
 
 .btn.xs {
@@ -96,15 +113,18 @@ input {
     padding-bottom: 50px;
 }
 
-.content img, .content h1 {
+.content img.varvara, .content h1 {
     display: inline-block;
     vertical-align: middle;
 }
 
 .content img {
+    margin-right: 30px;
+    width: 100%;
+}
+.content img.varvara {
     width: 200px;
     border-radius: 100em;
-    margin-right: 30px;
 }
 
 .content h1 { margin: 0; }
@@ -120,4 +140,8 @@ input {
     font-size: 70%;
     font-style: italic;
     line-height: normal;
+}
+
+.secondary {
+    color: var(--metalgray);
 }
