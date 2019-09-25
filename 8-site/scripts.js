@@ -2,8 +2,7 @@ let menuLinks = [
     [`index.html`, `Главная`],
     [`riddles.html`, `Игра в загадки`],
     [`guess.html`, `Угадай число`],
-    [`passwords.html`, `Мастер паролей`],
-    [`online-shop.html`, `Вёрстка интернет-магазина`]
+    [`passwords.html`, `Мастер паролей`]
 ];
 function doMenu(){
     let className = ``;
